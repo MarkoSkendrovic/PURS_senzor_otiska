@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marko" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleslogin.css') }}" />
+</head>
+<body>
+    <header>
+        <form action="/login" method="post">
+            <dev>
+                <img src="static/images/cbk_logo.png" width="150px" height="100px" >
+                <p> Sign In </p>
+                <label for="email"><b>Username</b></label>
+                <input type="email" placeholder="USERNAME" name="email">
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="PASSWORD" name="password">
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <button>Login</button>
+                {% if error %}
+                    <p class="error"> {{ error }}</p>
+                {% endif %}
+            </dev>
+        </form>
+    </header>
+</body>
+</html>

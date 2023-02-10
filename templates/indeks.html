@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marko" />
+    <title> Početna stranica </title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="cbk-logo" src="static/images/cbk-logo.png" alt="Logo firme" style="float:left" padding: 10px/>
+            <p class="logo-naslov" > Circuit Board Kitchen </p>
+        </div>
+
+        <div class="user">
+            <div class="logout">
+                <p class="user-name">{{sesija["username"]}}</p>
+                <form action="/logout" method="get" class="logout-button">
+                    <button style="background-color:grey; border-color:black; color:white" type="submit">Logout</button>
+                </form>
+                <form action="/pregled" method="get" class="logout-button">
+                     <button style="background-color:grey; border-color:black; color:white" type="submit">Pregled prisutnosti</button>
+                </form>
+            </div>
+          <img class="user-icon" src="static/images/user-icon-{{sesija['profilna']}}.png" alt="User icon" />
+        </div>
+      </header>
+      <nav>
+        <a href="#">Usluga</a>
+        <a href="#">Cijenik</a>
+        <a href="#">O nama</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Lokacije</a>
+        <a href="#">Jezik: Hrvatski</a>
+      </nav>
+      <main>
+        <p class="uvod-tekst">Circuit Board Kitchen je firma s bazom u Zagrebu koja se bavi projektiranjem, dizajnom i distribucijom tiskanih pločica na području cijele hrvatske. Konstantim razvojem CBK tim kao novu uslugu u našem asortimanu nudi mogućnost pračenja dolazaka i odlazaka kao na primjer unutar firma za prisutnost radnika na radnom mjestu te vođenje evidencije.  </p>
+        <div class="class">
+            <img class="class-image" src="static/images/ideja.png" alt="Logo ideje">
+            <p class="class-text">Sustav koji je osmislio CBK - ov inženjerski tim nudi novu generaciju vođenja evidencije radnika o njihovim dolascima i odlascima. Korisniku nudimo sigurnosno spremanja podataka o pristunosti zaposlenika.  </p>
+        </div>
+        <div class="class">
+            <img class="class-image" src="static/images/logo-telefon.png" alt="Logo telefona ">
+            <p class="class-text"> Ukoliko želite biti dio našeg programa u vođenju evidencije Vaših zapolenika javite nam se mailom na circuitboardkitchen.info@gmail.com ili nas potražite uživo na jednoj od naših poslovnica. </p>
+        </div>
+        <div class="class">
+            <img class="class-image" src="static/images/logo-stit.png" alt="Logo stit">
+            <p class="class-text"> Naša usluga uključuje vođenje evidencije Vaših zapolenika podataka biometrijskom tehnologijom koja identificira zaposlenike otiskom prsta točnosti do 255 točaka detekcije.  </p>
+        </div>
+      </main>
+</body>
+</html>

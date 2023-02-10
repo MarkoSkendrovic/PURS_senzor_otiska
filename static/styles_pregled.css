@@ -1,0 +1,36 @@
+html{
+    background-color: lavender;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+tr{
+    font-weight: bold;
+    background-color: lightgreen;
+    border: 3px solid black;
+}
+
+td, th{
+    border: 3px solid black;
+    padding: 10px;
+}
+
+th{
+    font-size: x-large;
+}
+
+
+

@@ -1,0 +1,44 @@
+html{
+    background-image: url('images/security1.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+body{
+    margin-left: 38vw;
+    margin-right: 38vw;
+    margin-top: 6cm;
+    background-color: white;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    border-left: 5px solid green;
+    border-right: 5px solid green;
+}
+
+dev{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+dev>p{
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    background-color: green;
+    color: white;
+    padding: 20px 20px;
+    margin: 8px 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.error{
+    color: red;
+    text-align: center;
+}
